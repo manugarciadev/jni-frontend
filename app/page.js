@@ -2,6 +2,7 @@ import Cta from "@layouts/components/Cta";
 import GSAPWrapper from "@layouts/components/GSAPWrapper";
 import Features from "@layouts/partials/Features";
 import HomeBanner from "@layouts/partials/HomeBanner";
+import WaitlistForm from "@layouts/partials/WaitListForm";
 import RecentBlog from "@layouts/partials/RecentBlog";
 import WeeklyActivity from "@layouts/partials/WeeklyActivity";
 import SeoMeta from "@layouts/partials/SeoMeta";
@@ -21,15 +22,16 @@ const Home = async () => {
   
   return (
     <GSAPWrapper>
-      <SeoMeta title="Home" />
-      <HomeBanner banner={banner} brands={brands} />
+      <SeoMeta title="Waitlist" />
+      {/*<HomeBanner banner={banner} brands={brands} />
       <RecentBlog posts={posts} />
       <WeeklyActivity />
       
       <Features features={features} />
       <ShortIntro intro={intro} />
       <Testimonial testimonial={testimonial} />
-      <Cta />
+      <Cta />*/}
+      <WaitlistForm />
     </GSAPWrapper>
   );
 };

@@ -59,10 +59,10 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
-        <Header />
+        {/* <Header />*/}
         {children}
-        <Footer />
-        <button
+        {/*<Footer /> */}
+        {/*<button
           type="button"
           onClick={handleBackToTop}
           className="fixed right-6 bottom-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1a7a6e] text-white shadow-xl transition hover:bg-[#16624f]"
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
           >
             <path d="M12 4.5a.75.75 0 0 1 .53.22l7 7a.75.75 0 1 1-1.06 1.06L13 7.81V20.25a.75.75 0 0 1-1.5 0V7.81L5.53 12.78a.75.75 0 1 1-1.06-1.06l7-7A.75.75 0 0 1 12 4.5z" />
           </svg>
-        </button>
+        </button>*/}
       </body>
     </html>
   );

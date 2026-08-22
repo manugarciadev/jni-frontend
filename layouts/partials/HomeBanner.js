@@ -28,7 +28,7 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
       const header = document.querySelector(".header");
       const tl = gsap.timeline();
       tl.fromTo(
-        ".banner-img",
+        ".banner-img, .banner-video",
         {
           y: 20,
           opacity: 0,
@@ -198,14 +198,30 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
             alt="Paint banner"
           />
         </div>
-       <ImageFallback
-  className="banner-img w-full max-w-3xl -mt-16"
-  src={bannerData.image}
-  width={1170}
-  height={666}
-  priority={true}
-  alt=""
-/>
+        {bannerData && bannerData.video ? (
+          <div className="w-full max-w-3xl -mt-16 overflow-hidden rounded-2xl">
+            <video
+              className="banner-video w-full h-auto object-cover"
+              src={bannerData.video}
+              poster={bannerData.image || undefined}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden={true}
+            />
+          </div>
+        ) : (
+          <ImageFallback
+            className="banner-img w-full max-w-3xl -mt-16"
+            src={bannerData.image}
+            width={1170}
+            height={666}
+            priority={true}
+            alt=""
+          />
+        )}
       </div>
     </div>
   </div>
